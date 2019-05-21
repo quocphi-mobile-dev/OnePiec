@@ -22,4 +22,13 @@ public class Bullet {
         x += orient;
         return x <= 0|| x>= MyFrame.W_FRAME;
     }
+    // buổi 3
+    Rectangle getRect() {
+        Rectangle rectangle = new Rectangle(
+                x, y,
+                image.getWidth(null),
+                image.getHeight(null)
+        );
+        return rectangle;
+    }
 }

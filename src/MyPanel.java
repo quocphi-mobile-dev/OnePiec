@@ -28,7 +28,6 @@ public class MyPanel extends JPanel {
     KeyListener key = new KeyListener() {
         @Override
         public void keyTyped(KeyEvent e) {
-
         }
 
         @Override
@@ -52,14 +51,14 @@ public class MyPanel extends JPanel {
         public void run() {
             // Thực hiện di chuyển
             while (true) {
-                if (flag[KeyEvent.VK_UP] == true){
+                if (flag[KeyEvent.VK_UP] == true) {
                     manager.player.orient = Player.UP;
 
-                }else {
+                } else {
                     manager.player.orient = Player.DOW;
                 }
 
-                if (flag[KeyEvent.VK_SPACE] == true){
+                if (flag[KeyEvent.VK_SPACE] == true) {
                     manager.player.fire(manager.arrBulletPlayer);
                 }
 
@@ -68,7 +67,7 @@ public class MyPanel extends JPanel {
                 repaint();
 
                 try {
-                    Thread.sleep(5);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
